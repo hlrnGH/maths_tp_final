@@ -1,0 +1,7 @@
+Ce TP nous a permis de modéliser les dynamiques proie-prédateur à l’aide du système différentiel de Lotka-Volterra. Après une implémentation numérique du modèle avec solve_ivp, nous avons confronté ses prédictions à des données réelles issues de relevés de populations de lapins et de renards.
+
+Le dataset a nécessité un nettoyage préalable pour garantir la validité biologique des simulations (suppression ou correction des valeurs négatives et manquantes). Nous avons ensuite procédé à une première optimisation des paramètres (alpha, beta, delta, gamma) par grid search, en testant un ensemble discret de valeurs et en minimisant l’erreur quadratique moyenne (MSE) entre modèle et données.
+
+Pour améliorer ce calibrage, nous avons appliqué une optimisation locale par l’algorithme de Newton-Raphson, via la méthode 'Newton-CG' de scipy.optimize.minimize, accompagnée d’un gradient numérique. Cette approche a permis d’obtenir un ajustement plus précis avec moins d’itérations.
+
+Enfin, ce TP a illustré les forces et les limites du modèle de Lotka-Volterra : bien qu’élégant, il reste simplifié et peine à capturer la complexité des dynamiques écologiques réelles. L’exercice a néanmoins été riche pour comprendre la modélisation biologique et la mise en œuvre concrète d’une méthode d’optimisation.
